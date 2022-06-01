@@ -1,9 +1,9 @@
 package com.curame.fianzas.pagos.repository;
 
 import com.curame.fianzas.pagos.models.entity.Payment;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(path = "payments")
-public interface PaymentDao extends PagingAndSortingRepository<Payment,Long> {
+@Repository
+public interface PaymentDao extends CrudRepository<Payment,Long> {
 }
